@@ -1,0 +1,37 @@
+\documentclass{IEEEconf}
+
+\input{packages.tex}
+\input{variables.tex}
+
+\begin{document}
+\sffamily
+% Front page containing title, author and date
+\pagenumbering{gobble}
+\input{sec/0 frontpage.tex}
+\newpage
+
+% Set page numbering to arabic and show the table of contents, toc should not contain page number
+\pagenumbering{arabic}
+\thispagestyle{empty}
+\tableofcontents
+\newpage
+
+% Enable two column layout for the rest of the document
+\twocolumn
+
+% Dictionary containing all the terms used in the document
+\input{sec/0 dictionairy.tex}
+\newpage
+
+% Abstract of the document
+\input{sec/0 abstract.tex}
+
+% Sections of the document
+\input{sec/1 introduction.tex}
+
+\label{sec:referenties}
+\bibliography{references}
+
+% Appendices
+% \input{sections/8 attachments.tex}
+\end{document}
